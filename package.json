@@ -1,27 +1,20 @@
 {
 	"name": "language-roll20-script",
-	"version": "0.0.0",
-	"description": "Syntax for macros on Roll20.net",
-	"main": "index.js",
+	"version": "0.0.1",
+	"description": "Syntax highlighting for macros on Roll20.net",
 	"repository": "https://github.com/wizard04wsu/language-roll20-script",
-	"bugs": "https://github.com/wizard04wsu/language-roll20-script/issues",
 	"keywords": [
-		"grammar",
-		"syntax",
-		"roll20"
+		"roll20",
+		"macro",
+		"syntax"
 	],
-	"author": {
-		"name": "Andy Harrison",
-		"url": "https://github.com/wizard04wsu"
-	},
+	"author": "Andy Harrison",
 	"license": "MIT",
+	"main": "index.js",
 	"engines": {
 		"atom": ">=1.0.0"
 	},
-	"devDependencies": {
-		"tree-sitter-cli": "^0.16.9"
-	},
 	"dependencies": {
-		"tree-sitter-roll20-script": "^0.0.1"
+		"tree-sitter-roll20-script": "^1.0.1"
 	}
 }
