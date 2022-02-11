@@ -1,8 +1,5 @@
-build
-node_modules
-/test
-package-lock.json
-/parser.*
-/scanner.*
+/node_modules/
+/test/*
+!/test/examples/
+/package-lock.json
 *.log
-.node-version
