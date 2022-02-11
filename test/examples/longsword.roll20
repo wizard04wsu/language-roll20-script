@@ -1,0 +1,7 @@
+@{wtype}&{template:atkdmg} {{attack=1}} {{r1=[[1d20 + [[@{strength_mod}]][STR] + [[@{PB}]][PROF]]]}} @{rtype} + [[@{strength_mod}]][STR] + [[@{PB}]][PROF]]]}} {{mod=+[[[[@{strength_mod}]][STR] + [[@{PB}]][PROF]]]}} {{charname=@{character_name}}} {{desc=You may perform a maneuver:
+
+Before DM reveals if it hits:
+&nbsp;[[0 [--- Add 🎲 to the attack roll before the DM reveals whether it hits. ---]]] [Precision Attack (🎲)](~@{character_name}|Precision Attack)
+Or, if it hits:
+&nbsp;[[0 [--- Attempt to disarm the target, forcing it to drop one item of your choice that it&apos;s holding. ---]]] [Disarming Attack (🎲)](~@{character_name}|Disarming Attack)
+&nbsp;[[0 [--- The next attack roll against the target by an attacker other than you (before your next turn) has advantage. ---]]] [Distracting Strike (🎲)](~@{character_name}|Distracting Strike)}} {{damage=1}} {{dmg1flag=1}} {{dmg1type=Slashing}} ?{Hands|2-handed, {{rname=Longsword (2-handed)&#125;&#125; {{dmg1=[[1d10 + [[@{strength_mod}]][STR]]]&#125;&#125; {{crit1=[[1d10[CRIT]]]&#125;&#125;|1-handed, {{rname=Longsword (1-handed)&#125;&#125; {{dmg1=[[1d8 + [[@{strength_mod}]][STR]]]&#125;&#125; {{crit1=[[1d8[CRIT]]]&#125;&#125;}
