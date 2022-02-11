@@ -1,0 +1,23 @@
+{
+	"name": "language-roll20-script",
+	"version": "0.0.1",
+	"description": "Syntax highlighting for macros on Roll20.net",
+	"repository": "https://github.com/wizard04wsu/language-roll20-script",
+	"keywords": [
+		"roll20",
+		"macro",
+		"syntax"
+	],
+	"author": "Andy Harrison",
+	"license": "MIT",
+	"main": "index.js",
+	"engines": {
+		"atom": ">=1.0.0"
+	},
+	"dependencies": {
+		"tree-sitter-roll20-script": "^1.0.5"
+	},
+	"devDependencies": {
+		"electron-rebuild": "^3.2.7"
+	}
+}

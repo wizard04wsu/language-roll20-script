@@ -1,0 +1,135 @@
+name: 'Roll20 Script'
+scopeName: 'source.roll20'
+type: 'tree-sitter'
+parser: 'tree-sitter-roll20-script'
+fileTypes: [
+  'roll20'
+]
+firstLineRegex: '(\\s*@\\{wtype\\})?\\s*&\\{template:'
+scopes:
+  'script': 'source.roll20'
+  
+  'string': 'string.unquoted.roll20'
+  
+  'htmlEntity': 'constant.character.html-entity.roll20'
+  
+  'hash': 'punctuation.definition.macro.begin.hash.roll20'
+  
+  'label': 'comment.block.documentation.label.roll20'
+  #'label > delimiter_start': 'punctuation.definition.parameters.begin.bracket.square.roll20'
+  #'label > label_text': 'string.unquoted.roll20'
+  #'label > label_text > htmlEntity': 'comment.block.documentation.label.html-entity.roll20'
+  #'label > delimiter_end': 'punctuation.definition.parameters.end.bracket.square.roll20'
+  
+  'number_constant': 'constant.numeric.roll20'
+  'decimal_point': 'constant.numeric.roll20'
+  
+  'operator': 'keyword.operator.roll20'
+  
+  'attribute': 'meta.attribute.roll20'
+  'attribute > delimiter_start': 'punctuation.definition.parameters.begin.bracket.curly.roll20'
+  'attribute > separator': 'punctuation.definition.separator.pipe.roll20'
+  'attribute > character_token': 'variable.language.character.token.roll20'
+  'attribute > character_identifier': 'string.unquoted.character.name.roll20'
+  'attribute > attribute_identifier': 'string.unquoted.attribute.name.roll20'
+  'attribute > keyword': 'keyword.other.max.roll20'
+  'attribute > delimiter_end': 'punctuation.definition.parameters.end.bracket.curly.roll20'
+  
+  'ability': 'meta.ability.roll20'
+  'ability > delimiter_start': 'punctuation.definition.parameters.begin.bracket.curly.roll20'
+  'ability > separator': 'punctuation.definition.separator.pipe.roll20'
+  'ability > character_token': 'variable.language.character.token.roll20'
+  'ability > character_identifier': 'string.unquoted.character.name.roll20'
+  'ability > ability_identifier': 'string.unquoted.ability.name.roll20'
+  'ability > delimiter_end': 'punctuation.definition.parameters.end.bracket.curly.roll20'
+  
+  'abilityCommandButton': 'meta.button.roll20'
+  'abilityCommandButton > label': 'meta.label.roll20'
+  'abilityCommandButton > label > delimiter_start': 'punctuation.definition.parameters.begin.bracket.square.roll20'
+  'abilityCommandButton > label > label_text': 'string.unquoted.label.roll20'
+  'abilityCommandButton > label > delimiter_end': 'punctuation.definition.parameters.end.bracket.square.roll20'
+  'abilityCommandButton > delimiter_start': 'punctuation.definition.parameters.begin.bracket.round.tilde.roll20'
+  'abilityCommandButton > separator': 'punctuation.definition.separator.pipe.roll20'
+  'abilityCommandButton > character_token': 'variable.language.character.token.roll20'
+  'abilityCommandButton > character_identifier': 'string.unquoted.character.name.roll20'
+  'abilityCommandButton > ability_identifier': 'string.unquoted.ability.name.roll20'
+  'abilityCommandButton > delimiter_end': 'punctuation.definition.parameters.end.bracket.round.roll20'
+  
+  'inlineRoll': 'meta.function.inline-roll.roll20'
+  'inlineRoll > delimiter_start': 'punctuation.definition.parameters.begin.double.bracket.square.roll20'
+  'inlineRoll > delimiter_end': 'punctuation.definition.parameters.end.double.bracket.square.roll20'
+  
+  'rollCommand': 'meta.function.command.roll20'
+  'rollCommand > delimiter': 'punctuation.definition.initiator.slash.roll20'
+  'rollCommand > command_identifier': 'entity.name.function.roll20'
+  
+  'formula': 'meta.formula.roll20'
+  
+  'parenthesized': 'meta.parenthesized.roll20'
+  'parenthesized > delimiter_start': 'punctuation.definition.parameters.begin.bracket.round.roll20'
+  'parenthesized > delimiter_end': 'punctuation.definition.parameters.end.bracket.round.roll20'
+  
+  'function': 'meta.function.roll20'
+  'function > function_identifier': 'entity.name.function.roll20'
+  'function > delimiter_start': 'punctuation.definition.function-parameters.begin.bracket.round.roll20'
+  'function > delimiter_end': 'punctuation.definition.function-parameters.end.bracket.round.roll20'
+  
+  'diceRoll': 'meta.roll.dice.roll20'
+  'diceRoll > count': 'entity.other.count.roll20'
+  'diceRoll > delimiter': 'punctuation.definition.parameters.letter-d.roll20'
+  'diceRoll > sides': 'entity.other.sides.roll20'
+  'diceRoll > sides > fate': 'constant.other.roll20'
+  'diceRoll > modifiers': 'string.unquoted.modifiers.roll20'
+  
+  'groupRoll': 'meta.roll.grouped.roll20'
+  'groupRoll > delimiter_start': 'punctuation.definition.parameters.begin.bracket.curly.roll20'
+  'groupRoll > separator': 'punctuation.definition.separator.comma.roll20'
+  'groupRoll > delimiter_end': 'punctuation.definition.parameters.end.bracket.curly.roll20'
+  'groupRoll > modifiers': 'string.unquoted.modifiers.roll20'
+  
+  'tableRoll': 'meta.roll.table.roll20'
+  'tableRoll > count': 'entity.other.count.roll20'
+  'tableRoll > delimiter_start': 'punctuation.definition.parameters.begin.letter-t.bracket.square.roll20'
+  'tableRoll > table_identifier': 'string.unquoted.table.name.roll20'
+  'tableRoll > delimiter_end': 'punctuation.definition.parameters.end.bracket.square.roll20'
+  
+  'rollQuery': 'meta.query.roll20'
+  'rollQuery > delimiter_start': 'punctuation.definition.parameters.begin.questionmark.bracket.curly.roll20'
+  'rollQuery > prompt': 'string.unquoted.query.prompt.roll20'
+  'rollQuery > separator': 'punctuation.definition.separator.pipe.roll20'
+  'rollQuery > default_value': 'string.unquoted.query.default-value.roll20'
+  'rollQuery > option > option_identifier': 'string.unquoted.query.option.name.roll20'
+  'rollQuery > option > separator': 'punctuation.definition.separator.comma.roll20'
+  'rollQuery > option > option_value': 'string.unquoted.query.option.value.roll20'
+  'rollQuery > delimiter_end': 'punctuation.definition.parameters.end.bracket.curly.roll20'
+  
+  'flag': 'meta.flag.roll20'
+  'flag > delimiter_start': 'punctuation.definition.parameters.begin.ampersand.bracket.curly.roll20'
+  'flag > flag_identifier': 'entity.name.type.flag.name.roll20'
+  'flag > separator': 'punctuation.definition.separator.colon.roll20'
+  'flag > flag_value': 'string.unquoted.flag.value.roll20'
+  'flag > delimiter_end': 'punctuation.definition.parameters.end.bracket.curly.roll20'
+  
+  'template_property': 'meta.template-property.roll20'
+  'template_property > delimiter_start': 'punctuation.definition.parameters.begin.double.bracket.curly.roll20'
+  'template_property > property_identifier': 'variable.property.name.roll20'
+  'template_property > property_value': 'string.unquoted.property.value.roll20'
+  'template_property > delimiter_end': 'punctuation.definition.parameters.end.double.bracket.curly.roll20'
+  'rollTemplate > comment': 'comment.block.roll20'
+  
+folds: [
+  {
+    type: 'rollQuery',
+    start: { type: 'separator', index: 0 }
+    end: { type: '"}"' }
+  }
+  {
+    type: '_rt_property',
+    start: { type: 'identifier' }
+    end: { type: '"}}"' }
+  }
+  {
+    start: { type: '"@{rtype}"' }
+    end: { type: '"}}"' }
+  }
+]
