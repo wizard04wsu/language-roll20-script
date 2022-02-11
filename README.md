@@ -4,3 +4,5 @@
 Tree-sitter parser for macros, abilities, and roll templates on [Roll20](https://roll20.net/).
 
 This supports elements nested (i.e., HTML-escaped) within roll queries, grouped rolls, rollable tables, and ability command buttons.
+
+Dependency: [tree-sitter-roll20-script](https://github.com/wizard04wsu/tree-sitter-roll20-script)
