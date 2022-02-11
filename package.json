@@ -15,6 +15,9 @@
 		"atom": ">=1.0.0"
 	},
 	"dependencies": {
-		"tree-sitter-roll20-script": "^1.0.1"
+		"tree-sitter-roll20-script": "^1.0.5"
+	},
+	"devDependencies": {
+		"electron-rebuild": "^3.2.7"
 	}
 }

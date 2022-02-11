@@ -15,6 +15,12 @@ scopes:
   
   'hash': 'punctuation.definition.macro.begin.hash.roll20'
   
+  'label': 'comment.block.documentation.label.roll20'
+  #'label > delimiter_start': 'punctuation.definition.parameters.begin.bracket.square.roll20'
+  #'label > label_text': 'string.unquoted.roll20'
+  #'label > label_text > htmlEntity': 'comment.block.documentation.label.html-entity.roll20'
+  #'label > delimiter_end': 'punctuation.definition.parameters.end.bracket.square.roll20'
+  
   'number_constant': 'constant.numeric.roll20'
   'decimal_point': 'constant.numeric.roll20'
   
@@ -38,8 +44,9 @@ scopes:
   'ability > delimiter_end': 'punctuation.definition.parameters.end.bracket.curly.roll20'
   
   'abilityCommandButton': 'meta.button.roll20'
+  'abilityCommandButton > label': 'meta.label.roll20'
   'abilityCommandButton > label > delimiter_start': 'punctuation.definition.parameters.begin.bracket.square.roll20'
-  'abilityCommandButton > label > string': 'string.unquoted.label.roll20'
+  'abilityCommandButton > label > label_text': 'string.unquoted.label.roll20'
   'abilityCommandButton > label > delimiter_end': 'punctuation.definition.parameters.end.bracket.square.roll20'
   'abilityCommandButton > delimiter_start': 'punctuation.definition.parameters.begin.bracket.round.tilde.roll20'
   'abilityCommandButton > separator': 'punctuation.definition.separator.pipe.roll20'
@@ -57,8 +64,6 @@ scopes:
   'rollCommand > command_identifier': 'entity.name.function.roll20'
   
   'formula': 'meta.formula.roll20'
-  'formula > label': 'comment.block.documentation.label.roll20'
-  'formula > label > htmlEntity': 'comment.block.documentation.label.html-entity.roll20'
   
   'parenthesized': 'meta.parenthesized.roll20'
   'parenthesized > delimiter_start': 'punctuation.definition.parameters.begin.bracket.round.roll20'
@@ -95,6 +100,7 @@ scopes:
   'rollQuery > default_value': 'string.unquoted.query.default-value.roll20'
   'rollQuery > option > option_identifier': 'string.unquoted.query.option.name.roll20'
   'rollQuery > option > separator': 'punctuation.definition.separator.comma.roll20'
+  'rollQuery > option > option_value': 'string.unquoted.query.option.value.roll20'
   'rollQuery > delimiter_end': 'punctuation.definition.parameters.end.bracket.curly.roll20'
   
   'flag': 'meta.flag.roll20'
